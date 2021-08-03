@@ -32,7 +32,8 @@ namespace DotnetIteration
         //
         public static IEnumerable<string> Yelling(List<string> words)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            return words.Select(word => word.ToUpper());
         }
 
 
@@ -43,7 +44,8 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> Double(List<int> numbers)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            return numbers.Select(number => number * 2);
         }
 
 
@@ -53,9 +55,10 @@ namespace DotnetIteration
         //    string suffixed with " is at index X" where X is the index
         //    of the element.
         // 
-        public static IEnumerable<string> StringyIndexes(List<string> words)
+        public static IEnumerable<string> StringyIndexes(List<string> data)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            return data.Select((word, index) => $"{word} is at index {index}");
         }
 
 
@@ -63,9 +66,10 @@ namespace DotnetIteration
         // 4) Complete the method OnlyTheEvenSurvive that accepts a list of
         //    numbers and returns only the elements that are even.
         // 
-        public static IEnumerable<int> OnlyTheEvenSurvive(List<int> numbers)
+        public static IEnumerable<int> OnlyTheEvenSurvive(List<int> data)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            return data.Where((element) => element % 2 == 0);
         }
 
 
@@ -74,9 +78,10 @@ namespace DotnetIteration
         //    list of numbers and returns only the elements at indexes that
         //    are even.
         // 
-        public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> numbers)
+        public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> data)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            return data.Where((element, index) => index % 2 == 0);
         }
 
 
@@ -93,9 +98,10 @@ namespace DotnetIteration
         //   Score: 99
         // }
         // 
-        public static IEnumerable<string> BestMovieOfTheYear(List<Movie> movies, int yearToMatch)
+        public static IEnumerable<string> BestMovieOfTheYear(List<Movie> data, int year)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            return data.Where((movie) => movie.Year == year && movie.Score >= 90).Select(movie => movie.Name);
         }
 
 
@@ -103,9 +109,10 @@ namespace DotnetIteration
         // 7) Complete the method EveryoneIsOdd that accepts a list of
         //    numbers and returns true if every element of the list is odd.
         // 
-        public static bool EveryoneIsOdd(List<int> numbers)
+        public static bool EveryoneIsOdd(List<int> data)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            return data.All(element => element % 2 != 0);
         }
 
 
@@ -114,9 +121,10 @@ namespace DotnetIteration
         //    strings and returns the one string that contains the word
         //    `needle`.
         // 
-        public static string FindTheNeedle(List<string> sentences)
+        public static string FindTheNeedle(List<string> data)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            return data.FirstOrDefault(word => word.Contains("needle"));
         }
 
 
@@ -125,9 +133,10 @@ namespace DotnetIteration
         //    strings and returns the index of the string that contains
         //    the word `needle` inside.
         // 
-        public static int FindTheNeedleIndex(List<string> sentences)
+        public static int FindTheNeedleIndex(List<string> data)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            return data.FindIndex(word => word.Contains("needle"));
         }
 
 
@@ -136,9 +145,10 @@ namespace DotnetIteration
         //     strings and returns true if at least one string is exactly
         //     four characters long.
         // 
-        public static bool SomeoneToLove(List<string> words)
+        public static bool SomeoneToLove(List<string> data)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            return data.Any(flower => flower.Length == 4);
         }
     }
 }
